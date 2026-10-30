@@ -1,198 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeSpace</title>
+    <meta name="description" content="SafeSpace — помощь подросткам в борьбе с кибербуллингом.">
+    <title>SafeSpace — безопасное пространство</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>SafeSpace</h1>
-        <p>You are not alone. Your voice matters.</p>
-
-        <nav>
-            <a href="#report">Report</a>
-            <a href="#quiz">Cyberbullying Quiz</a>
-            <a href="#advice">Get Advice</a>
-            <a href="#help">Find Help</a>
-            <a href="#analyzer">AI Message Analyzer</a>
-            <a href="#psychologist">Talk to a Psychologist</a>
+        <p>Ты не одна. Твой голос важен.</p>
+        <nav aria-label="Главное меню">
+            <a href="#report">Сообщить о травле</a>
+            <a href="#quiz">Тест о кибербуллинге</a>
+            <a href="#advice">Получить совет</a>
+            <a href="#help">Найти помощь</a>
+            <a href="#analyzer">Анализ сообщения</a>
+            <a href="#psychologist">Поговорить с психологом</a>
         </nav>
     </header>
 
     <main>
         <section id="welcome">
-            <h2>Welcome to SafeSpace</h2>
-            <p>A safe place to learn about cyberbullying and find help.</p>
+            <h2>Добро пожаловать в SafeSpace!</h2>
+            <p>Безопасное пространство, где ты можешь узнать о кибербуллинге и найти поддержку.</p>
         </section>
 
         <section id="report">
-            <h2>Report Cyberbullying</h2>
-            <p>You can describe what happened without entering your name.</p>
-
+            <h2>Сообщить о кибербуллинге</h2>
+            <p>Опиши ситуацию. Не указывай своё имя и личные данные.</p>
             <form id="report-form">
-                <label for="report-type">Type of cyberbullying:</label>
+                <label for="report-type">Выбери вид травли:</label>
                 <select id="report-type" name="report-type" required>
-                    <option value="">Choose a type</option>
-                    <option value="insults">Insults or hurtful comments</option>
-                    <option value="threats">Threatening messages</option>
-                    <option value="photos">Harmful photos or videos</option>
-                    <option value="rumors">Rumors or embarrassing posts</option>
-                    <option value="other">Other</option>
+                    <option value="">Выбери вариант</option>
+                    <option value="insults">Оскорбления и обидные комментарии</option>
+                    <option value="threats">Угрозы в сообщениях</option>
+                    <option value="photos">Обидные фотографии или видео</option>
+                    <option value="rumors">Слухи и унизительные публикации</option>
+                    <option value="other">Другое</option>
                 </select>
-
-                <label for="report-details">What happened?</label>
-                <textarea id="report-details" name="report-details" rows="5"
-                    placeholder="Describe the situation. Do not include names or contact details." required></textarea>
-
-                <button type="submit">Submit Report</button>
+                <label for="report-details">Что произошло?</label>
+                <textarea id="report-details" name="report-details" rows="5" placeholder="Опиши ситуацию. Не указывай имена и контактные данные." required></textarea>
+                <button type="submit">Отправить сообщение</button>
                 <p id="report-message" role="status" aria-live="polite"></p>
             </form>
+            <p><strong>Важно:</strong> сейчас форма не отправляет сообщения на сервер.</p>
         </section>
+
         <section id="quiz">
-            <h2>Cyberbullying Quiz</h2>
-            <p>Can you recognize cyberbullying? Read the situation and choose your answer.</p>
-
+            <h2>Тест о кибербуллинге</h2>
+            <p>Умеешь ли ты распознавать травлю в интернете? Прочитай ситуацию и выбери ответ.</p>
             <article class="quiz-question">
-                <h3>Question 1</h3>
-                <p>Your classmates post unflattering photos of you online with hurtful comments. Is this cyberbullying?
-                </p>
-
-                <label>
-                    <input type="radio" name="quiz-answer" value="yes">
-                    Yes, it can be cyberbullying.
-                </label>
-
-                <label>
-                    <input type="radio" name="quiz-answer" value="no">
-                    No, it is always just a joke.
-                </label>
-
-                <button type="button" id="check-answer">Check Answer</button>
+                <h3>Вопрос 1</h3>
+                <p>Одноклассники публикуют твои фотографии в интернете и добавляют обидные комментарии. Это кибербуллинг?</p>
+                <label><input type="radio" name="quiz-answer" value="yes"> Да, это может быть кибербуллингом.</label>
+                <label><input type="radio" name="quiz-answer" value="no"> Нет, это всегда просто шутка.</label>
+                <button type="button" id="check-answer">Проверить ответ</button>
                 <p id="quiz-result" role="status" aria-live="polite"></p>
             </article>
         </section>
+
         <section id="advice">
-            <h2>Get Advice</h2>
-            <p>If someone is bullying you online, remember these steps:</p>
-
-            <article class="advice-card">
-                <h3>1. Don't argue</h3>
-                <p>Stay calm. You don't have to reply to hurtful messages.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>2. Save the evidence</h3>
-                <p>Take screenshots of harmful messages, comments, or posts.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>3. Block the sender</h3>
-                <p>Block the person so they cannot continue contacting you through that account.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>4. Report the content</h3>
-                <p>Report bullying messages or posts to the social media platform.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>5. Tell a trusted adult</h3>
-                <p>Talk to a parent, teacher, school psychologist, or another adult you trust.</p>
-            </article>
+            <h2>Как защитить себя</h2>
+            <p>Если тебя травят в интернете, постарайся следовать этим советам.</p>
+            <article class="advice-card"><h3>1. Не вступай в спор</h3><p>Сохраняй спокойствие. Ты не обязана отвечать на обидные сообщения.</p></article>
+            <article class="advice-card"><h3>2. Сохрани доказательства</h3><p>Сделай скриншоты обидных сообщений, комментариев и публикаций.</p></article>
+            <article class="advice-card"><h3>3. Заблокируй отправителя</h3><p>Заблокируй человека, чтобы он не мог продолжать писать тебе с этого аккаунта.</p></article>
+            <article class="advice-card"><h3>4. Пожалуйся на публикацию</h3><p>Пожалуйся на обидные сообщения или публикации через инструменты социальной сети.</p></article>
+            <article class="advice-card"><h3>5. Расскажи взрослому, которому доверяешь</h3><p>Обратись к родителю, учителю, школьному психологу или другому человеку, которому доверяешь.</p></article>
         </section>
+
         <section id="help">
-            <h2>Find Help</h2>
-            <p>You do not have to face cyberbullying alone. You can ask these people for help.</p>
-
-            <article class="advice-card">
-                <h3>School Psychologist</h3>
-                <p>A school psychologist can listen to you and help you deal with difficult feelings.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>Trusted Teacher</h3>
-                <p>Talk to a teacher you trust. They may help you find a safe solution.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>Parents or Guardians</h3>
-                <p>Tell a trusted family member what is happening and ask for support.</p>
-            </article>
-
-            <article class="advice-card">
-                <h3>Support Organizations</h3>
-                <p>You can contact a local child protection or youth support organization for advice.</p>
-            </article>
+            <h2>Где найти помощь</h2>
+            <p>Тебе не нужно справляться с кибербуллингом в одиночку.</p>
+            <article class="advice-card"><h3>Школьный психолог</h3><p>Психолог может выслушать тебя и помочь справиться с переживаниями.</p></article>
+            <article class="advice-card"><h3>Учитель, которому ты доверяешь</h3><p>Расскажи учителю о ситуации. Он может помочь найти безопасное решение.</p></article>
+            <article class="advice-card"><h3>Родители или опекуны</h3><p>Расскажи близкому взрослому о том, что происходит, и попроси поддержки.</p></article>
+            <article class="advice-card"><h3>Организации поддержки</h3><p>Можно обратиться в местную организацию по защите детей или поддержке подростков.</p></article>
         </section>
+
         <section id="analyzer">
-            <h2>AI Message Analyzer</h2>
-
-            <p>
-                Enter an example message to check for potentially harmful language.
-                Do not enter real names, passwords, or private information.
-            </p>
-
+            <h2>Анализатор сообщений</h2>
+            <p>Введи пример сообщения. Не вводи настоящие имена, пароли и личную информацию.</p>
             <form id="analyzer-form">
-                <label for="message-input">Your example message:</label>
-
-                <textarea id="message-input" rows="4" placeholder="Type an example message here..." required></textarea>
-
-                <button type="submit">Analyze Message</button>
+                <label for="message-input">Пример сообщения:</label>
+                <textarea id="message-input" rows="4" placeholder="Напиши пример сообщения..." required></textarea>
+                <button type="submit">Проверить сообщение</button>
             </form>
-
             <div id="analyzer-result" role="status" aria-live="polite"></div>
-
-            <p>
-                This tool provides basic guidance, not a professional assessment.
-            </p>
+            <p>Это простой инструмент, который ищет определённые слова и фразы, а не использует настоящий искусственный интеллект.</p>
         </section>
+
         <section id="psychologist">
-            <h2>Talk to a Psychologist</h2>
-
-            <p>
-                Would you prefer an online or in-person consultation?
-            </p>
-
+            <h2>Поговорить с психологом</h2>
+            <p>Какой формат консультации тебе больше подходит?</p>
             <form id="psychologist-form">
-                <label for="consultation-type">Choose a consultation type:</label>
-
+                <label for="consultation-type">Выбери формат консультации:</label>
                 <select id="consultation-type" required>
-                    <option value="">Choose an option</option>
-                    <option value="online">Online consultation</option>
-                    <option value="offline">In-person consultation</option>
+                    <option value="">Выбери вариант</option>
+                    <option value="online">Онлайн-консультация</option>
+                    <option value="offline">Личная встреча</option>
                 </select>
-
-                <label for="contact-preference">How would you prefer to be contacted?</label>
-
+                <label for="contact-preference">Какой вариант связи ты предпочитаешь?</label>
                 <select id="contact-preference" required>
-                    <option value="">Choose an option</option>
-                    <option value="anonymous">Anonymous information only</option>
-                    <option value="email">Email (only if you choose to provide it later)</option>
+                    <option value="">Выбери вариант</option>
+                    <option value="anonymous">Только анонимная информация</option>
+                    <option value="email">Связь по электронной почте в будущем</option>
                 </select>
-
-                <button type="submit">Continue</button>
-
+                <button type="submit">Продолжить</button>
                 <p id="psychologist-message" role="status" aria-live="polite"></p>
             </form>
-
-            <p>
-                This form does not send a real consultation request yet.
-                If you are in immediate danger, contact a trusted adult or local emergency services.
-            </p>
+            <p>Сейчас форма не отправляет заявку и не записывает на консультацию. Если тебе угрожает опасность, обратись к взрослому, которому доверяешь, или в местную экстренную службу.</p>
         </section>
     </main>
 
     <footer>
-        <p>SafeSpace — You are not alone. Your voice matters.</p>
-        <p>Be kind. Stay safe. Ask for help when you need it.</p>
+        <p>SafeSpace — ты не одна. Твой голос важен.</p>
+        <p>Будь добрее. Береги себя. Проси о помощи, когда она нужна.</p>
         <p>&copy; 2026 SafeSpace</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
