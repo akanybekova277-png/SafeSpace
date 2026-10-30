@@ -53,6 +53,10 @@ analyzerForm.addEventListener("submit", function (event) {
     const harmfulPhrases = [
         "ненавижу тебя",
         "ты тупой",
+        "ты глупая",
+        "ты глупой",
+        "не красивая",
+        "не красивый",
         "ты тупая",
         "идиот",
         "идиотка",
