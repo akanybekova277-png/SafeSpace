@@ -1,39 +1,43 @@
-# SafeSpace
+# SafeSpace — безопасное пространство
 
-**You are not alone. Your voice matters.**
+**Ты не одна. Твой голос важен. 💙**
 
-## About the Project
+## О проекте
 
-SafeSpace is a website designed to help teenagers aged 12–18 understand cyberbullying, find advice, and learn where to seek support.
+SafeSpace — это веб-сайт для подростков от 12 до 18 лет, который помогает узнать о кибербуллинге, получить советы и найти поддержку.
 
-## Features
+## Возможности сайта
 
-1. **Report Cyberbullying** — describe a cyberbullying situation using a form.
-2. **Cyberbullying Quiz** — learn to recognize cyberbullying.
-3. **Get Advice** — read practical safety tips.
-4. **Find Help** — learn who can provide support.
-5. **AI Message Analyzer** — check example messages for potentially harmful language.
-6. **Talk to a Psychologist** — choose between online and in-person consultation options.
+1. **Сообщить о кибербуллинге** — описать ситуацию с помощью формы.
+2. **Тест о кибербуллинге** — научиться распознавать травлю в интернете.
+3. **Как защитить себя** — узнать, как действовать в ситуации травли.
+4. **Где найти помощь** — узнать, к кому можно обратиться за поддержкой.
+5. **Анализатор сообщений** — проверить сообщение на наличие потенциально обидных выражений.
+6. **Поговорить с психологом** — выбрать онлайн-консультацию или личную встречу.
 
-## Technologies
+## Используемые технологии
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML5 — структура сайта.
+- CSS3 — оформление сайта.
+- JavaScript — интерактивные функции.
 
-## Important Notes
+## Структура проекта
 
-The current website is a frontend prototype. Reports are not sent to a server, consultations are not booked, and the message analyzer uses a basic list of keywords rather than a real AI model.
+- `index.html` — структура и текст сайта.
+- `style.css` — стили и оформление сайта.
+- `script.js` — интерактивные функции.
+- `README.md` — описание проекта.
 
-Do not enter real names, passwords, or private information into the website.
+## Важная информация
 
-## Project Files
+Текущая версия SafeSpace — прототип интерфейса.
 
-- `index.html` — website structure
-- `style.css` — website design
-- `script.js` — interactive features
-- `README.md` — project description
+- Формы пока не отправляют данные на сервер.
+- Запись к психологу пока не осуществляется.
+- Анализатор ищет определённые слова и фразы, но не использует настоящую модель искусственного интеллекта.
 
-## Author
+Не вводи настоящие имена, пароли и другие личные данные.
 
-Created as a student project.
+## Автор
+
+Учебный проект SafeSpace.
