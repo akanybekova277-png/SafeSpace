@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8ff;
+    color: #26344a;
+}
+
+header {
+    background-color: #dceaff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    color: #315da8;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #315da8;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: white;
+    color: #315da8;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #c4d9ff;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+}
+
+/* Report section */
+section {
+    margin-bottom: 30px;
+}
+
+#report {
+    padding-top: 20px;
+    border-top: 1px solid #e1e9f5;
+}
+
+#report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#report-form label {
+    font-weight: bold;
+    color: #26344a;
+}
+
+#report-form select,
+#report-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd8eb;
+    border-radius: 8px;
+    font: inherit;
+    background-color: #ffffff;
+}
+
+#report-form textarea {
+    resize: vertical;
+}
+
+#report-form select:focus,
+#report-form textarea:focus {
+    outline: 2px solid #7ca8f5;
+    border-color: #315da8;
+}
+
+#report-form button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #315da8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#report-form button:hover {
+    background-color: #244780;
+}
+
+/* Cyberbullying Quiz */
+.quiz-question {
+    margin-top: 20px;
+    padding: 24px;
+    background-color: #f4f8ff;
+    border: 1px solid #dceaff;
+    border-radius: 12px;
+}
+
+.quiz-question h3 {
+    color: #315da8;
+}
+
+.quiz-question label {
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+#check-answer {
+    padding: 12px 20px;
+    background-color: #315da8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#check-answer:hover {
+    background-color: #244780;
+}
+
+#quiz-result {
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+/* Get Advice section */
+#advice {
+    padding-top: 20px;
+    border-top: 1px solid #e1e9f5;
+}
+
+.advice-card {
+    margin: 18px 0;
+    padding: 20px;
+    background-color: #f4f8ff;
+    border-left: 5px solid #315da8;
+    border-radius: 10px;
+}
+
+.advice-card h3 {
+    margin-top: 0;
+    color: #315da8;
+}
+
+.advice-card p {
+    line-height: 1.6;
+}
+
+/* SafeSpace sections */
+main section {
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+main section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+main section p {
+    line-height: 1.7;
+}
+
+/* Forms */
+#analyzer-form,
+#psychologist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#analyzer-form label,
+#psychologist-form label {
+    font-weight: bold;
+}
+
+#analyzer-form textarea,
+#psychologist-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd8eb;
+    border-radius: 8px;
+    font: inherit;
+    background-color: white;
+}
+
+#analyzer-form textarea:focus,
+#psychologist-form select:focus {
+    outline: 2px solid #7ca8f5;
+}
+
+/* Form buttons */
+#analyzer-form button,
+#psychologist-form button {
+    padding: 13px 20px;
+    background-color: #315da8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#analyzer-form button:hover,
+#psychologist-form button:hover {
+    background-color: #244780;
+}
+
+/* Results */
+#analyzer-result,
+#psychologist-message {
+    margin-top: 15px;
+    padding: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+footer {
+    background-color: #dceaff;
+    color: #26344a;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+    line-height: 1.6;
+}

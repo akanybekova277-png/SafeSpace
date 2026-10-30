@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSpace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SafeSpace</h1>
+        <p>You are not alone. Your voice matters.</p>
+
+        <nav>
+            <a href="#report">Report</a>
+            <a href="#quiz">Cyberbullying Quiz</a>
+            <a href="#advice">Get Advice</a>
+            <a href="#help">Find Help</a>
+            <a href="#analyzer">AI Message Analyzer</a>
+            <a href="#psychologist">Talk to a Psychologist</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to SafeSpace</h2>
+            <p>A safe place to learn about cyberbullying and find help.</p>
+        </section>
+
+        <section id="report">
+            <h2>Report Cyberbullying</h2>
+            <p>You can describe what happened without entering your name.</p>
+
+            <form id="report-form">
+                <label for="report-type">Type of cyberbullying:</label>
+                <select id="report-type" name="report-type" required>
+                    <option value="">Choose a type</option>
+                    <option value="insults">Insults or hurtful comments</option>
+                    <option value="threats">Threatening messages</option>
+                    <option value="photos">Harmful photos or videos</option>
+                    <option value="rumors">Rumors or embarrassing posts</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="report-details">What happened?</label>
+                <textarea id="report-details" name="report-details" rows="5"
+                    placeholder="Describe the situation. Do not include names or contact details." required></textarea>
+
+                <button type="submit">Submit Report</button>
+                <p id="report-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+        <section id="quiz">
+            <h2>Cyberbullying Quiz</h2>
+            <p>Can you recognize cyberbullying? Read the situation and choose your answer.</p>
+
+            <article class="quiz-question">
+                <h3>Question 1</h3>
+                <p>Your classmates post unflattering photos of you online with hurtful comments. Is this cyberbullying?
+                </p>
+
+                <label>
+                    <input type="radio" name="quiz-answer" value="yes">
+                    Yes, it can be cyberbullying.
+                </label>
+
+                <label>
+                    <input type="radio" name="quiz-answer" value="no">
+                    No, it is always just a joke.
+                </label>
+
+                <button type="button" id="check-answer">Check Answer</button>
+                <p id="quiz-result" role="status" aria-live="polite"></p>
+            </article>
+        </section>
+        <section id="advice">
+            <h2>Get Advice</h2>
+            <p>If someone is bullying you online, remember these steps:</p>
+
+            <article class="advice-card">
+                <h3>1. Don't argue</h3>
+                <p>Stay calm. You don't have to reply to hurtful messages.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>2. Save the evidence</h3>
+                <p>Take screenshots of harmful messages, comments, or posts.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>3. Block the sender</h3>
+                <p>Block the person so they cannot continue contacting you through that account.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>4. Report the content</h3>
+                <p>Report bullying messages or posts to the social media platform.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>5. Tell a trusted adult</h3>
+                <p>Talk to a parent, teacher, school psychologist, or another adult you trust.</p>
+            </article>
+        </section>
+        <section id="help">
+            <h2>Find Help</h2>
+            <p>You do not have to face cyberbullying alone. You can ask these people for help.</p>
+
+            <article class="advice-card">
+                <h3>School Psychologist</h3>
+                <p>A school psychologist can listen to you and help you deal with difficult feelings.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>Trusted Teacher</h3>
+                <p>Talk to a teacher you trust. They may help you find a safe solution.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>Parents or Guardians</h3>
+                <p>Tell a trusted family member what is happening and ask for support.</p>
+            </article>
+
+            <article class="advice-card">
+                <h3>Support Organizations</h3>
+                <p>You can contact a local child protection or youth support organization for advice.</p>
+            </article>
+        </section>
+        <section id="analyzer">
+            <h2>AI Message Analyzer</h2>
+
+            <p>
+                Enter an example message to check for potentially harmful language.
+                Do not enter real names, passwords, or private information.
+            </p>
+
+            <form id="analyzer-form">
+                <label for="message-input">Your example message:</label>
+
+                <textarea id="message-input" rows="4" placeholder="Type an example message here..." required></textarea>
+
+                <button type="submit">Analyze Message</button>
+            </form>
+
+            <div id="analyzer-result" role="status" aria-live="polite"></div>
+
+            <p>
+                This tool provides basic guidance, not a professional assessment.
+            </p>
+        </section>
+        <section id="psychologist">
+            <h2>Talk to a Psychologist</h2>
+
+            <p>
+                Would you prefer an online or in-person consultation?
+            </p>
+
+            <form id="psychologist-form">
+                <label for="consultation-type">Choose a consultation type:</label>
+
+                <select id="consultation-type" required>
+                    <option value="">Choose an option</option>
+                    <option value="online">Online consultation</option>
+                    <option value="offline">In-person consultation</option>
+                </select>
+
+                <label for="contact-preference">How would you prefer to be contacted?</label>
+
+                <select id="contact-preference" required>
+                    <option value="">Choose an option</option>
+                    <option value="anonymous">Anonymous information only</option>
+                    <option value="email">Email (only if you choose to provide it later)</option>
+                </select>
+
+                <button type="submit">Continue</button>
+
+                <p id="psychologist-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <p>
+                This form does not send a real consultation request yet.
+                If you are in immediate danger, contact a trusted adult or local emergency services.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>SafeSpace — You are not alone. Your voice matters.</p>
+        <p>Be kind. Stay safe. Ask for help when you need it.</p>
+        <p>&copy; 2026 SafeSpace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
