@@ -1,3 +1,16 @@
+// 1. Форма сообщения о кибербуллинге
+const reportForm = document.getElementById("report-form");
+const reportMessage = document.getElementById("report-message");
+
+reportForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    reportMessage.textContent =
+        "Спасибо за сообщение. Сейчас оно не отправляется на сервер. Если тебе нужна помощь, расскажи взрослому, которому доверяешь.";
+});
+
+
+// 2. Тест о кибербуллинге
 const checkAnswerButton = document.getElementById("check-answer");
 const quizResult = document.getElementById("quiz-result");
 
@@ -7,19 +20,22 @@ checkAnswerButton.addEventListener("click", function () {
     );
 
     if (!selectedAnswer) {
-        quizResult.textContent = "Please choose an answer first.";
+        quizResult.textContent = "Сначала выбери ответ.";
         return;
     }
 
     if (selectedAnswer.value === "yes") {
         quizResult.textContent =
-            "Correct! Hurtful comments and embarrassing photos can be cyberbullying. Save evidence and ask a trusted adult for help.";
+            "Правильно! Обидные комментарии и унизительные фотографии могут быть кибербуллингом. Сохрани доказательства и обратись к взрослому, которому доверяешь.";
     } else {
         quizResult.textContent =
-            "Not quite! This can be cyberbullying. Save evidence and ask a trusted adult for help.";
+            "Не совсем! Это может быть кибербуллингом. Сохрани доказательства и попроси помощи у взрослого, которому доверяешь.";
     }
 });
-// Basic SafeSpace message analyzer
+
+
+// 3. Анализатор сообщений
+// Это проверка ключевых слов, а не настоящий искусственный интеллект.
 const analyzerForm = document.getElementById("analyzer-form");
 const messageInput = document.getElementById("message-input");
 const analyzerResult = document.getElementById("analyzer-result");
@@ -30,32 +46,39 @@ analyzerForm.addEventListener("submit", function (event) {
     const message = messageInput.value.trim().toLowerCase();
 
     if (message.length === 0) {
-        analyzerResult.textContent = "Please enter a message first.";
+        analyzerResult.textContent = "Сначала введи сообщение.";
         return;
     }
 
-    const harmfulWords = [
-        "hate you",
-        "stupid",
-        "idiot",
-        "kill yourself",
-        "nobody likes you",
-        "loser"
+    const harmfulPhrases = [
+        "ненавижу тебя",
+        "ты тупой",
+        "ты тупая",
+        "идиот",
+        "идиотка",
+        "убей себя",
+        "никто тебя не любит",
+        "неудачник",
+        "неудачница",
+        "ты никому не нужна",
+        "ты никому не нужен"
     ];
 
-    const foundHarmfulWords = harmfulWords.some(function (word) {
-        return message.includes(word);
+    const foundHarmfulPhrase = harmfulPhrases.some(function (phrase) {
+        return message.includes(phrase);
     });
 
-    if (foundHarmfulWords) {
+    if (foundHarmfulPhrase) {
         analyzerResult.textContent =
-            "Warning: This message may contain hurtful language. Context matters. If someone sent you this message, save the evidence and talk to a trusted adult.";
+            "Внимание! В сообщении могут быть обидные выражения. Контекст тоже важен. Если тебе прислали такое сообщение, сохрани доказательства и расскажи взрослому, которому доверяешь.";
     } else {
         analyzerResult.textContent =
-            "No listed harmful phrases were detected. However, this does not guarantee that the message is safe. Context and intent matter.";
+            "Мы не нашли знакомых нам обидных выражений. Но это не означает, что сообщение безопасно. Важны контекст и намерения человека.";
     }
 });
-// Psychologist consultation form
+
+
+// 4. Форма консультации с психологом
 const psychologistForm = document.getElementById("psychologist-form");
 const consultationType = document.getElementById("consultation-type");
 const contactPreference = document.getElementById("contact-preference");
@@ -65,15 +88,16 @@ psychologistForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (!consultationType.value || !contactPreference.value) {
-        psychologistMessage.textContent = "Please choose both options.";
+        psychologistMessage.textContent =
+            "Пожалуйста, выбери оба варианта.";
         return;
     }
 
     if (consultationType.value === "online") {
         psychologistMessage.textContent =
-            "You selected an online consultation. No request has been sent yet. A real consultation service must be connected before you can talk to a psychologist.";
+            "Ты выбрала онлайн-консультацию. Заявка пока не отправлена. Для настоящего общения необходимо подключить службу консультаций.";
     } else {
         psychologistMessage.textContent =
-            "You selected an in-person consultation. No appointment has been booked. A real consultation service must be connected before you can book an appointment.";
+            "Ты выбрала личную встречу. Запись пока не оформлена. Для настоящей записи необходимо подключить службу консультаций.";
     }
 });
